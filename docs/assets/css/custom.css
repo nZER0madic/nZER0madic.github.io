@@ -1,3 +1,7 @@
+.custom-bg-dark {
+    background-color: #0A0A0A;
+}
+
 .loader-wrapper {
     position: relative;
     display: flex;
