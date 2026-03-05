@@ -43,7 +43,8 @@ body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;over
 body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.06) 2px,rgba(0,0,0,0.06) 4px);pointer-events:none;z-index:9999;}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:68px;background:rgba(6,6,8,0.93);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+/*nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:68px;background:rgba(6,6,8,0.93);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+*/nav {position: fixed;top: 0;left: 0;right: 0;z-index: 200;display: flex;align-items: center;justify-content: space-between;padding: 0 20px;min-height: 68px;background: rgba(6,6,8,0.93);backdrop-filter: blur(16px);border-bottom: 1px solid var(--border);flex-wrap: wrap;}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
 .nav-logo img{height:38px;width:38px;object-fit:contain;filter:drop-shadow(0 0 8px var(--pink-glow));}
 .nav-logo-text{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:3px;color:var(--text);}
