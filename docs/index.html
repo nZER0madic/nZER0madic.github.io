@@ -1,56 +1,918 @@
-<!doctype html>
-<html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Madmaking</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="assets/css/bootstrap-4.5.0.min.css">
-        <link rel="stylesheet" href="assets/css/lineicons.css">
-		<link rel="stylesheet" href="assets/css/animate.css">
-		<link rel="stylesheet" href="assets/css/style.css">
-		<link rel="stylesheet" href="assets/css/custom.css">
-    </head>
-    <body>
-        <main class="main-06">
-            <div class="main-wrapper demo-06 d-flex justify-content-center align-items-center">
-                <div class="loader-wrapper custom-bg-dark">
-                    <span class="loader-letter">M</span>
-                    <span class="loader-letter">A</span>
-                    <span class="loader-letter">D</span>
-                    <span class="loader-letter">M</span>
-                    <span class="loader-letter">A</span>
-                    <span class="loader-letter">K</span>
-                    <span class="loader-letter">I</span>
-                    <span class="loader-letter">N</span>
-                    <span class="loader-letter">G</span>
-                  
-                    <div class="loader"></div>
-                </div>
-                <div class="hero-area">
-                    <div class="">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="heading">
-                                    <h1 class="text-white wow fadeInUp" data-wow-delay=".2s" style="text-align: center;">Hier entsteht die neue Website von Madmaking</h1>
-                                </div>
-                            </div>
-                            <div class="col-xl-12" style="justify-items: center;">
-                                <!--<div class="wow fadeInRight" data-wow-delay=".4s" data-countdown="">TBA</div>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MADMAKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="57x57" href="assets/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="assets/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="assets/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="assets/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="assets/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="assets/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="assets/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="assets/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="assets/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="assets/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<style>
+:root {
+  --pink: #E0157A;
+  --pink-bright: #FF1A8C;
+  --pink-dim: #8B0D4C;
+  --pink-glow: rgba(224,21,122,0.25);
+  --bg: #060608;
+  --bg2: #0C0C10;
+  --bg3: #111116;
+  --surface: #18181F;
+  --border: #232329;
+  --text: #ECEEF5;
+  --muted: #5A5C6A;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.06) 2px,rgba(0,0,0,0.06) 4px);pointer-events:none;z-index:9999;}
 
-		<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
-		<script src="assets/js/vendor/jquery-3.5.1.min.js"></script>
-		<script src="assets/js/popper.min.js"></script>
-		<script src="assets/js/bootstrap-4.5.0.min.js"></script>
-        <script src="assets/js/countdown.js"></script>
-        <script src="assets/js/wow.min.js"></script>
-		<script src="assets/js/main.js"></script>
-    </body>
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:68px;background:rgba(6,6,8,0.93);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo img{height:38px;width:38px;object-fit:contain;filter:drop-shadow(0 0 8px var(--pink-glow));}
+.nav-logo-text{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:3px;color:var(--text);}
+.nav-logo-text span{color:var(--pink);}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--text);}
+.nav-right{display:flex;align-items:center;gap:16px;}
+.nav-live{display:flex;align-items:center;gap:7px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--pink);}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--pink);animation:pulse 1.5s infinite;}
+.btn-admin-nav{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:8px 16px;background:transparent;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:all 0.2s;}
+.btn-admin-nav:hover{border-color:var(--pink);color:var(--pink);}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(0.8);}}
+
+/* HERO */
+#hero{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 45%,rgba(224,21,122,0.13) 0%,transparent 65%),radial-gradient(ellipse 40% 80% at 15% 60%,rgba(224,21,122,0.06) 0%,transparent 60%);}
+.hero-bg::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(224,21,122,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(224,21,122,0.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,black 20%,transparent 72%);}
+.hero-content{position:relative;text-align:center;z-index:2;}
+.hero-logo{width:130px;height:130px;object-fit:contain;margin:0 auto 24px;display:block;filter:drop-shadow(0 0 40px rgba(224,21,122,0.5));opacity:0;animation:fadeUp 0.7s 0.2s forwards;}
+.hero-tag{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--pink);margin-bottom:16px;opacity:0;animation:fadeUp 0.6s 0.5s forwards;}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(72px,14vw,180px);line-height:0.9;letter-spacing:4px;color:var(--text);opacity:0;animation:fadeUp 0.7s 0.65s forwards;}
+.hero-title span{color:var(--pink);display:block;}
+.hero-sub{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:300;letter-spacing:7px;text-transform:uppercase;color:var(--muted);margin-top:14px;opacity:0;animation:fadeUp 0.6s 0.8s forwards;}
+.hero-cta{margin-top:44px;display:flex;gap:16px;justify-content:center;opacity:0;animation:fadeUp 0.6s 1s forwards;}
+.btn{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:14px 32px;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.2s;}
+.btn-primary{background:var(--pink);color:#fff;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);}
+.btn-primary:hover{background:var(--pink-bright);transform:translateY(-2px);box-shadow:0 8px 24px rgba(224,21,122,0.35);}
+.btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border);clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);}
+.btn-ghost:hover{color:var(--text);border-color:var(--muted);}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+/* SECTIONS */
+.section-wrap{padding:90px 40px;max-width:1320px;margin:0 auto;}
+.section-wrap-full{padding:90px 40px;background:var(--bg2);}
+.section-wrap-full .inner{max-width:1320px;margin:0 auto;}
+.section-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--pink);margin-bottom:6px;}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,5.5vw,72px);letter-spacing:2px;line-height:1;color:var(--text);margin-bottom:40px;}
+.divider{width:48px;height:2px;background:var(--pink);margin-bottom:36px;}
+
+/* STREAMS */
+.streams-controls{display:flex;gap:12px;margin-bottom:24px;flex-wrap:wrap;align-items:center;}
+.stream-toggle-btn{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;background:var(--surface);border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:all 0.2s;}
+.stream-toggle-btn:hover,.stream-toggle-btn.active{border-color:var(--pink);color:var(--pink);background:rgba(224,21,122,0.08);}
+.streams-grid{display:grid;gap:12px;}
+.streams-grid.layout-1{grid-template-columns:1fr;}
+.streams-grid.layout-2{grid-template-columns:1fr 1fr;}
+.streams-grid.layout-3{grid-template-columns:2fr 1fr;grid-template-rows:auto auto;}
+.streams-grid.layout-4{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;}
+.stream-cell{background:#000;border:1px solid var(--border);position:relative;aspect-ratio:16/9;overflow:hidden;}
+.stream-cell iframe{width:100%;height:100%;border:none;display:block;}
+.stream-cell.main-stream{grid-row:span 2;}
+.stream-label{position:absolute;top:8px;left:8px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:rgba(6,6,8,0.85);color:var(--pink);padding:4px 8px;border:1px solid rgba(224,21,122,0.3);z-index:2;}
+.stream-offline{display:flex;align-items:center;justify-content:center;height:100%;flex-direction:column;gap:8px;color:var(--muted);}
+.stream-offline-icon{font-size:32px;opacity:0.3;}
+.stream-offline-text{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;}
+
+/* PLAYERS */
+.players-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+@media(max-width:1100px){.players-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:700px){.players-grid{grid-template-columns:repeat(2,1fr);}}
+.player-card{background:var(--surface);border:1px solid var(--border);position:relative;overflow:hidden;transition:transform 0.3s,border-color 0.3s;}
+.player-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--pink);transform:scaleX(0);transition:transform 0.3s;}
+.player-card:hover{transform:translateY(-6px);border-color:var(--pink-dim);}
+.player-card:hover::before{transform:scaleX(1);}
+.player-avatar{width:100%;aspect-ratio:1/1;background:var(--bg3);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.player-avatar-initials{font-family:'Bebas Neue',sans-serif;font-size:56px;color:var(--border);letter-spacing:2px;user-select:none;}
+.player-avatar img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
+.player-avatar::after{content:'';position:absolute;bottom:0;right:0;width:20px;height:20px;background:var(--surface);clip-path:polygon(100% 0,100% 100%,0 100%);}
+.player-info{padding:16px;}
+.player-role{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--pink);margin-bottom:3px;}
+.player-alias{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;line-height:1;color:var(--text);}
+.player-name{font-size:11px;color:var(--muted);margin-top:2px;}
+.player-country{font-size:16px;margin-top:8px;}
+
+/* SCHEDULE */
+.tabs{display:flex;gap:0;margin-bottom:28px;border-bottom:1px solid var(--border);}
+.tab-btn{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;background:none;border:none;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all 0.2s;}
+.tab-btn:hover{color:var(--text);}
+.tab-btn.active{color:var(--pink);border-bottom-color:var(--pink);}
+.tab-panel{display:none;}
+.tab-panel.active{display:block;}
+.schedule-grid{display:grid;gap:10px;}
+.match-card{background:var(--surface);border:1px solid var(--border);padding:18px 24px;display:grid;grid-template-columns:160px 1fr auto;align-items:center;gap:20px;position:relative;overflow:hidden;transition:border-color 0.2s;}
+.match-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;}
+.match-card.upcoming::before{background:var(--pink);}
+.match-card.won::before{background:#00D97E;}
+.match-card.lost::before{background:#FF4040;}
+.match-card:hover{border-color:var(--pink-dim);}
+.match-date{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;color:var(--muted);line-height:1.4;}
+.match-time-big{font-size:18px;font-weight:700;color:var(--text);display:block;}
+.match-teams{display:flex;align-items:center;gap:14px;}
+.match-team-us{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;letter-spacing:1px;color:var(--text);}
+.match-team-them{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;letter-spacing:1px;color:var(--muted);}
+.match-vs{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--border);}
+.match-meta{text-align:right;}
+.match-badge{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;display:inline-block;}
+.badge-upcoming{background:rgba(224,21,122,0.12);color:var(--pink);border:1px solid rgba(224,21,122,0.3);animation:glow 2.5s infinite;}
+@keyframes glow{0%,100%{box-shadow:0 0 0 rgba(224,21,122,0);}50%{box-shadow:0 0 14px rgba(224,21,122,0.3);}}
+.badge-won{background:rgba(0,217,126,0.1);color:#00D97E;border:1px solid rgba(0,217,126,0.2);}
+.badge-lost{background:rgba(255,64,64,0.1);color:#FF4040;border:1px solid rgba(255,64,64,0.2);}
+.match-score{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--text);letter-spacing:2px;margin-top:3px;}
+.match-map{font-size:11px;color:var(--muted);letter-spacing:1px;margin-top:2px;}
+@media(max-width:700px){.match-card{grid-template-columns:1fr;gap:10px;}.match-meta{text-align:left;}}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:40px;text-align:center;}
+.footer-logo{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px;}
+.footer-logo img{height:40px;filter:drop-shadow(0 0 8px var(--pink-glow));}
+.footer-logo-text{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:4px;}
+.footer-logo-text span{color:var(--pink);}
+.footer-links{display:flex;gap:24px;justify-content:center;list-style:none;margin:0 0 16px;}
+.footer-links a{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.footer-links a:hover{color:var(--pink);}
+footer p{font-size:12px;color:var(--muted);}
+
+/* ══════════════════════════════════
+   ADMIN PANEL
+══════════════════════════════════ */
+#adminOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:500;backdrop-filter:blur(8px);overflow-y:auto;}
+#adminOverlay.open{display:flex;align-items:flex-start;justify-content:center;padding:40px 20px;}
+.admin-panel{background:var(--bg2);border:1px solid var(--border);width:100%;max-width:900px;position:relative;}
+.admin-header{display:flex;align-items:center;justify-content:space-between;padding:24px 32px;border-bottom:1px solid var(--border);}
+.admin-header h2{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:2px;color:var(--text);}
+.admin-header h2 span{color:var(--pink);}
+.admin-close{background:none;border:none;color:var(--muted);font-size:24px;cursor:pointer;transition:color 0.2s;line-height:1;}
+.admin-close:hover{color:var(--text);}
+.admin-tabs{display:flex;border-bottom:1px solid var(--border);}
+.admin-tab{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:14px 24px;background:none;border:none;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all 0.2s;}
+.admin-tab:hover{color:var(--text);}
+.admin-tab.active{color:var(--pink);border-bottom-color:var(--pink);}
+.admin-content{padding:32px;}
+.admin-section{display:none;}
+.admin-section.active{display:block;}
+.admin-section h3{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--pink);margin-bottom:20px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+.form-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px;}
+.form-full{margin-bottom:12px;}
+label.field-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:5px;}
+.field-input,.field-select{width:100%;background:var(--surface);border:1px solid var(--border);color:var(--text);font-family:'Barlow',sans-serif;font-size:14px;padding:10px 14px;outline:none;transition:border-color 0.2s;}
+.field-select option{background:var(--surface);}
+.field-input:focus,.field-select:focus{border-color:var(--pink);}
+.admin-btn{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:11px 24px;border:none;cursor:pointer;transition:all 0.2s;}
+.admin-btn-primary{background:var(--pink);color:#fff;}
+.admin-btn-primary:hover{background:var(--pink-bright);}
+.admin-btn-danger{background:transparent;border:1px solid rgba(255,64,64,0.3);color:#FF4040;}
+.admin-btn-danger:hover{background:rgba(255,64,64,0.1);}
+.admin-btn-ghost{background:transparent;border:1px solid var(--border);color:var(--muted);}
+.admin-btn-ghost:hover{border-color:var(--muted);color:var(--text);}
+.admin-list{display:grid;gap:8px;margin-top:20px;}
+.admin-list-item{background:var(--surface);border:1px solid var(--border);padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.admin-list-item-info{flex:1;min-width:0;}
+.admin-list-item-title{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--text);letter-spacing:0.5px;}
+.admin-list-item-sub{font-size:12px;color:var(--muted);margin-top:2px;}
+.admin-list-actions{display:flex;gap:8px;flex-shrink:0;}
+.admin-divider{height:1px;background:var(--border);margin:28px 0;}
+.admin-save-bar{padding:20px 32px;border-top:1px solid var(--border);display:flex;gap:12px;align-items:center;justify-content:flex-end;}
+.save-status{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:1px;color:var(--pink);opacity:0;transition:opacity 0.3s;}
+.save-status.show{opacity:1;}
+
+/* LOGIN */
+#loginOverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:600;backdrop-filter:blur(12px);align-items:center;justify-content:center;}
+#loginOverlay.open{display:flex;}
+.login-box{background:var(--bg2);border:1px solid var(--border);padding:48px;width:360px;text-align:center;}
+.login-logo{width:60px;margin:0 auto 20px;display:block;filter:drop-shadow(0 0 16px var(--pink-glow));}
+.login-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;margin-bottom:4px;}
+.login-sub{font-size:13px;color:var(--muted);margin-bottom:28px;}
+.login-error{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:1px;color:#FF4040;margin-top:12px;display:none;}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<!-- LOGIN OVERLAY -->
+<div id="loginOverlay">
+  <div class="login-box">
+    <img src="https://ueqvkdnwupidabrkaisz.supabase.co/storage/v1/object/public/madmaking-assets/17577069862.png" class="login-logo" alt="Logo">
+    <div class="login-title">Admin Login</div>
+    <div class="login-sub">Nur für Teammitglieder</div>
+    <label class="field-label" for="adminEmail">E-Mail</label>
+    <input type="email" id="adminEmail" placeholder="E-Mail" class="field-input" style="margin-bottom:10px;text-align:center;">
+    <label class="field-label" for="adminPw">Passwort</label>
+    <input type="password" id="adminPw" class="field-input" placeholder="••••••••" style="margin-bottom:16px;text-align:center;" onkeydown="if(event.key==='Enter')doLogin()">
+    <button class="admin-btn admin-btn-primary" style="width:100%" onclick="doLogin()">Einloggen</button>
+    <div class="login-error" id="loginError">Falsches Passwort oder falsche E-Mail</div>
+    <button class="admin-btn admin-btn-ghost" style="width:100%;margin-top:10px" onclick="closeLogin()">Abbrechen</button>
+  </div>
+</div>
+
+<!-- ADMIN OVERLAY -->
+<div id="adminOverlay">
+  <div class="admin-panel">
+    <div class="admin-header">
+      <h2>ADMIN <span>PANEL</span></h2>
+      <button class="admin-close" onclick="closeAdmin()">✕</button>
+    </div>
+    <div class="admin-tabs">
+      <button class="admin-tab active" onclick="switchAdminTab('streams',this)">Streams</button>
+      <button class="admin-tab" onclick="switchAdminTab('players',this)">Spieler</button>
+      <button class="admin-tab" onclick="switchAdminTab('upcoming',this)">Upcoming</button>
+      <button class="admin-tab" onclick="switchAdminTab('results',this)">Ergebnisse</button>
+      <button class="admin-tab" onclick="switchAdminTab('settings',this)">Einstellungen</button>
+    </div>
+
+    <!-- STREAMS -->
+    <div class="admin-section active" id="admin-streams">
+      <div class="admin-content">
+        <h3>Twitch Streams konfigurieren</h3>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:20px;">Bis zu 4 Streams gleichzeitig. Felder leer lassen = Stream ausgeblendet.</p>
+        <div id="streamInputs"></div>
+      </div>
+      <div class="admin-save-bar">
+        <span class="save-status" id="streamSaveStatus">✓ Gespeichert</span>
+        <button class="admin-btn admin-btn-primary" onclick="saveStreams()">Streams speichern</button>
+      </div>
+    </div>
+
+    <!-- PLAYERS -->
+    <div class="admin-section" id="admin-players">
+      <div class="admin-content">
+        <h3>Spieler hinzufügen</h3>
+        <div class="form-row">
+          <div><label class="field-label">Alias (Gamertag)</label><input type="text" id="p-alias" class="field-input" placeholder="z.B. Mikefox2k"></div>
+          <div><label class="field-label">Richtiger Name</label><input type="text" id="p-name" class="field-input" placeholder="z.B. Nils 'motherfucking' Horny"></div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label class="field-label">Rolle</label>
+            <select id="p-role" class="field-select">
+              <option>IGL</option><option>AWPer</option><option>Rifler</option><option>Entry</option><option>Support</option><option>Lurker</option>
+            </select>
+          </div>
+          <div>
+            <label class="field-label">Flagge (Emoji)</label>
+            <input type="text" id="p-country" class="field-input" placeholder="🇩🇪">
+          </div>
+        </div>
+        <div class="form-full">
+          <label class="field-label">Foto-URL (optional)</label>
+          <input type="text" id="p-img" class="field-input" placeholder="https://... oder leer lassen">
+        </div>
+        <button class="admin-btn admin-btn-primary" onclick="addPlayer()">Spieler hinzufügen</button>
+        <div class="admin-divider"></div>
+        <h3>Aktuelle Spieler</h3>
+        <div class="admin-list" id="adminPlayerList"></div>
+      </div>
+    </div>
+
+    <!-- UPCOMING -->
+    <div class="admin-section" id="admin-upcoming">
+      <div class="admin-content">
+        <h3>Neues Spiel eintragen</h3>
+        <div class="form-row">
+          <div><label class="field-label">Datum</label><input type="text" id="u-date" class="field-input" placeholder="z.B. 14. März 2025"></div>
+          <div><label class="field-label">Uhrzeit</label><input type="text" id="u-time" class="field-input" placeholder="20:00"></div>
+        </div>
+        <div class="form-row">
+          <div><label class="field-label">Gegner</label><input type="text" id="u-opp" class="field-input" placeholder="z.B. Alternate aTTaX"></div>
+          <div><label class="field-label">Liga / Event</label><input type="text" id="u-league" class="field-input" placeholder="DACH Liga S12"></div>
+        </div>
+        <div class="form-full">
+          <label class="field-label">Format</label>
+          <input type="text" id="u-map" class="field-input" placeholder="Best of 3">
+        </div>
+        <button class="admin-btn admin-btn-primary" onclick="addUpcoming()">Spiel hinzufügen</button>
+        <div class="admin-divider"></div>
+        <h3>Eingetragene Spiele</h3>
+        <div class="admin-list" id="adminUpcomingList"></div>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="admin-section" id="admin-results">
+      <div class="admin-content">
+        <h3>Ergebnis eintragen</h3>
+        <div class="form-row">
+          <div><label class="field-label">Datum</label><input type="text" id="r-date" class="field-input" placeholder="07. März 2025"></div>
+          <div><label class="field-label">Gegner</label><input type="text" id="r-opp" class="field-input" placeholder="k1ck eSports"></div>
+        </div>
+        <div class="form-row-3">
+          <div>
+            <label class="field-label">Ergebnis</label>
+            <select id="r-result" class="field-select">
+              <option value="won">Sieg</option>
+              <option value="lost">Niederlage</option>
+              <option value="draw">Unentschieden</option>
+            </select>
+          </div>
+          <div><label class="field-label">Score (z.B. 2 — 0)</label><input type="text" id="r-score" class="field-input" placeholder="2 — 0"></div>
+          <div><label class="field-label">Liga</label><input type="text" id="r-league" class="field-input" placeholder="DACH Liga"></div>
+        </div>
+        <div class="form-full">
+          <label class="field-label">Maps (z.B. Mirage / Inferno)</label>
+          <input type="text" id="r-map" class="field-input" placeholder="Mirage / Inferno">
+        </div>
+        <button class="admin-btn admin-btn-primary" onclick="addResult()">Ergebnis speichern</button>
+        <div class="admin-divider"></div>
+        <h3>Gespeicherte Ergebnisse</h3>
+        <div class="admin-list" id="adminResultList"></div>
+      </div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div class="admin-section" id="admin-settings">
+      <div class="admin-content">
+        <h3>Passwort ändern</h3>
+        <div class="form-row" style="max-width:400px">
+          <div><label class="field-label">Neues Passwort</label><input type="password" id="newPw1" class="field-input" placeholder="••••••••"></div>
+          <div><label class="field-label">Wiederholen</label><input type="password" id="newPw2" class="field-input" placeholder="••••••••"></div>
+        </div>
+        <button class="admin-btn admin-btn-primary" onclick="changePw()">Passwort ändern</button>
+        <div id="pwMsg" style="font-size:12px;margin-top:10px;color:var(--pink);display:none;"></div>
+        <div class="admin-divider"></div>
+        <h3>Daten zurücksetzen</h3>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">Setzt alle eingetragenen Daten auf die Standardwerte zurück.</p>
+        <button class="admin-btn admin-btn-danger" onclick="resetAll()">Alle Daten zurücksetzen</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">
+    <img src="https://ueqvkdnwupidabrkaisz.supabase.co/storage/v1/object/public/madmaking-assets/17577069862.png" alt="Madmaking Logo">
+    <span class="nav-logo-text">MAD<span>MAKING</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#stream">Stream</a></li>
+    <li><a href="#players">Roster</a></li>
+    <li><a href="#schedule">Matches</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-live" id="liveIndicator" style="display:none">
+      <span class="live-dot"></span>LIVE
+    </div>
+    <button class="btn-admin-nav" onclick="openLogin()">⚙ Admin</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <img src="https://ueqvkdnwupidabrkaisz.supabase.co/storage/v1/object/public/madmaking-assets/17577069862.png" class="hero-logo" alt="Madmaking Logo">
+    <div class="hero-tag"></div>
+    <div class="hero-title">MAD<span>MAKING</span></div>
+    <div class="hero-sub">Play Hard · Stay Mad</div>
+    <div class="hero-cta">
+      <a href="#stream" class="btn btn-primary">Watch Live</a>
+      <a href="#schedule" class="btn btn-ghost">Matches</a>
+    </div>
+  </div>
+</div>
+
+<!-- STREAMS -->
+<div class="section-wrap-full" id="stream">
+  <div class="inner">
+    <div class="section-label">Twitch</div>
+    <div class="section-title">LIVE STREAMS</div>
+    <div class="streams-controls">
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;">Layout:</span>
+      <button class="stream-toggle-btn active" onclick="setLayout(1,this)">1 Stream</button>
+      <button class="stream-toggle-btn" onclick="setLayout(2,this)">2 Streams</button>
+      <button class="stream-toggle-btn" onclick="setLayout(3,this)">3 Streams</button>
+      <button class="stream-toggle-btn" onclick="setLayout(4,this)">4 Streams</button>
+    </div>
+    <div class="streams-grid layout-1" id="streamsGrid"></div>
+  </div>
+</div>
+
+<!-- PLAYERS -->
+<div class="section-wrap" id="players">
+  <div class="section-label">Stammaufstellung</div>
+  <div class="section-title">ROSTER</div>
+  <div class="divider"></div>
+  <div class="players-grid" id="playersGrid"></div>
+</div>
+
+<!-- SCHEDULE -->
+<div class="section-wrap-full" id="schedule">
+  <div class="inner">
+    <div class="section-label">Spielplan</div>
+    <div class="section-title">MATCHES</div>
+    <div class="divider"></div>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('upcoming',this)">Upcoming</button>
+      <button class="tab-btn" onclick="switchTab('results',this)">Results</button>
+    </div>
+    <div id="tab-upcoming" class="tab-panel active">
+      <div class="schedule-grid" id="upcomingMatches"></div>
+    </div>
+    <div id="tab-results" class="tab-panel">
+      <div class="schedule-grid" id="pastMatches"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <img src="https://ueqvkdnwupidabrkaisz.supabase.co/storage/v1/object/public/madmaking-assets/17577069862.png" alt="Logo">
+    <div class="footer-logo-text">MAD<span>MAKING</span></div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="https://twitch.tv/madmaking_cs" target="_blank">Twitch</a></li>
+    <li><a href="#players">Roster</a></li>
+    <li><a href="#schedule">Matches</a></li>
+  </ul>
+  <p>© 2025 Madmaking - Website created by Mikefox2k</p>
+</footer>
+
+<script>
+// ═══════════════════════════
+//  DEFAULT DATA
+// ═══════════════════════════
+const SUPABASEURL = "https://ueqvkdnwupidabrkaisz.supabase.co";
+const SUPABASEKEY = "sb_publishable_dRlAJ7YkiZQDqnFOtdOPnQ_iAHkG-vm";
+const SUPABASE = supabase.createClient(SUPABASEURL, SUPABASEKEY);
+
+const DEFAULTS = {
+  streams: [
+    {label:"Main / Caster", channel:"nZER0madic"},
+    {label:"Spieler 2", channel:""},
+    {label:"Spieler 3", channel:""},
+    {label:"Spieler 4", channel:""}
+  ],
+  players: [
+    {alias:"nZER0madic",name:"Nils",role:"AWPer",country:"🇩🇪",img:"https://distribution.faceit-cdn.net/images/ec47b9d1-fcf9-4fa1-b27b-e40601bdf43e.jpg"},
+    {alias:"blackyyy",name:"Fabian",role:"Entry",country:"🇩🇪",img:"https://assets.faceit-cdn.net/avatars/e0990101-340f-4ddd-8b62-bbc45cc92609_1590676168838.jpg"},
+    {alias:"-TobseN-",name:"Tobias",role:"Support",country:"🇩🇪",img:"https://distribution.faceit-cdn.net/images/140c4e26-9bde-4724-8d98-f18ccc2ac57d.jpg"},
+    {alias:"Hulk998",name:"Lukan",role:"Rifler",country:"🇩🇪",img:"https://distribution.faceit-cdn.net/images/5adf16c5-4f0f-4aef-9f07-98cf3e3e700e.jpeg"},
+    {alias:"Syntex",name:"Simon",role:"?",country:"🇩🇪",img:"https://distribution.faceit-cdn.net/images/c10be186-176f-42c0-ab5d-296d36c33676.jpg"}
+  ],
+  upcoming: [],
+  past: []
+};
+
+// ═══════════════════════════
+//  STATE (localStorage)
+// ═══════════════════════════
+function load(key, def) {
+  try { const v = localStorage.getItem("mm_"+key); return v ? JSON.parse(v) : def; }
+  catch(e) { return def; }
+}
+function save(key, val) {
+  try { localStorage.setItem("mm_"+key, JSON.stringify(val)); } catch(e) {}
+}
+
+let STATE = {
+  streams:  load("streams",  DEFAULTS.streams),
+  players:  load("players",  DEFAULTS.players),
+  upcoming: load("upcoming", DEFAULTS.upcoming),
+  past:     load("past",     DEFAULTS.past),
+  layout:   load("layout",   1)
+};
+
+// ═══════════════════════════
+//  RENDER STREAMS
+// ═══════════════════════════
+let currentLayout = STATE.layout;
+
+function setLayout(n, btn) {
+  currentLayout = n;
+  save("layout", n);
+  document.querySelectorAll(".stream-toggle-btn").forEach(b => b.classList.remove("active"));
+  if(btn) btn.classList.add("active");
+  renderStreams();
+}
+
+function renderStreams() {
+  const grid = document.getElementById("streamsGrid");
+  grid.className = "streams-grid layout-" + currentLayout;
+  const parent = window.location.hostname || "localhost";
+  const active = STATE.streams.slice(0, currentLayout);
+  let liveCount = 0;
+
+  grid.innerHTML = active.map((s, i) => {
+    const isMain = currentLayout === 3 && i === 0;
+    const cellClass = isMain ? "stream-cell main-stream" : "stream-cell";
+    if(s.channel && s.channel.trim()) {
+      liveCount++;
+      const src = `https://player.twitch.tv/?channel=${s.channel.trim()}&parent=${parent}&autoplay=false`;
+      return `<div class="${cellClass}">
+        <div class="stream-label">${s.label || "Stream "+(i+1)}</div>
+        <iframe src="${src}" allowfullscreen title="${s.label}"></iframe>
+      </div>`;
+    } else {
+      return `<div class="${cellClass}">
+        <div class="stream-offline">
+          <div class="stream-offline-icon">📺</div>
+          <div class="stream-offline-text">${s.label || "Stream "+(i+1)} — Offline</div>
+        </div>
+      </div>`;
+    }
+  }).join("");
+
+  const ind = document.getElementById("liveIndicator");
+  ind.style.display = liveCount > 0 ? "flex" : "none";
+}
+
+// ═══════════════════════════
+//  RENDER PLAYERS
+// ═══════════════════════════
+function renderPlayers() {
+  const grid = document.getElementById("playersGrid");
+  grid.innerHTML = STATE.players.map(p => {
+    const initials = (p.alias || "??").slice(0,2).toUpperCase();
+    const imgTag = p.img ? `<img src="${p.img}" alt="${p.alias}" onerror="this.style.display='none'">` : "";
+    return `<div class="player-card">
+      <div class="player-avatar">
+        <div class="player-avatar-initials">${initials}</div>${imgTag}
+      </div>
+      <div class="player-info">
+        <div class="player-role">${p.role}</div>
+        <div class="player-alias">${p.alias}</div>
+        <div class="player-name">${p.name}</div>
+        <div class="player-country">${p.country}</div>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+// ═══════════════════════════
+//  RENDER MATCHES
+// ═══════════════════════════
+function renderUpcoming() {
+  const el = document.getElementById("upcomingMatches");
+  if(!STATE.upcoming.length) { el.innerHTML = "<p style='color:var(--muted);font-family:Barlow Condensed,sans-serif;letter-spacing:2px;font-size:13px;'>Keine anstehenden Spiele.</p>"; return; }
+  el.innerHTML = STATE.upcoming.map(m => `
+    <div class="match-card upcoming">
+      <div class="match-date"><span class="match-time-big">${m.time} Uhr</span>${m.date}</div>
+      <div class="match-teams">
+        <span class="match-team-us">MADMAKING</span>
+        <span class="match-vs">VS</span>
+        <span class="match-team-them">${m.opponent}</span>
+      </div>
+      <div class="match-meta">
+        <span class="match-badge badge-upcoming">Upcoming</span>
+        <div class="match-map" style="margin-top:6px">${m.league}</div>
+        <div class="match-map">${m.map}</div>
+      </div>
+    </div>`).join("");
+}
+
+function renderPast() {
+  const el = document.getElementById("pastMatches");
+  if(!STATE.past.length) { el.innerHTML = "<p style='color:var(--muted);font-family:Barlow Condensed,sans-serif;letter-spacing:2px;font-size:13px;'>Noch keine Ergebnisse.</p>"; return; }
+  el.innerHTML = STATE.past.map(m => {
+    const bc = m.result==="won"?"badge-won":m.result==="lost"?"badge-lost":"";
+    const bt = m.result==="won"?"SIEG":m.result==="lost"?"NIEDERLAGE":"UNENTSCHIEDEN";
+    return `<div class="match-card ${m.result}">
+      <div class="match-date">${m.date}</div>
+      <div class="match-teams">
+        <span class="match-team-us">MADMAKING</span>
+        <span class="match-vs">VS</span>
+        <span class="match-team-them">${m.opponent}</span>
+      </div>
+      <div class="match-meta">
+        <span class="match-badge ${bc}">${bt}</span>
+        <div class="match-score">${m.score}</div>
+        <div class="match-map">${m.map}</div>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+function switchTab(tab, btn) {
+  document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+  document.querySelectorAll(".tab-panel").forEach(p=>p.classList.remove("active"));
+  btn.classList.add("active");
+  document.getElementById("tab-"+tab).classList.add("active");
+}
+
+// ═══════════════════════════
+//  AUTH
+// ═══════════════════════════
+let adminUnlocked = false;
+
+function openLogin() {
+  document.getElementById("loginOverlay").classList.add("open");
+  setTimeout(()=>document.getElementById("adminEmail").focus(), 100);
+}
+function closeLogin() {
+  document.getElementById("loginOverlay").classList.remove("open");
+  document.getElementById("adminEmail").value = "";
+  document.getElementById("adminPw").value = "";
+  document.getElementById("loginError").style.display = "none";
+}
+async function doLogin() {
+  const email = document.getElementById("adminEmail").value;
+  const pw = document.getElementById("adminPw").value;
+
+  const { data, error } = await SUPABASE.auth.signInWithPassword({
+    email: email,
+    password: pw,
+  });
+
+  if (error) {
+    document.getElementById("loginError").innerText = "Login fehlgeschlagen: " + error.message;
+    document.getElementById("loginError").style.display = "block";
+  } else {
+    adminUnlocked = true;
+    closeLogin();
+    openAdmin();
+  }
+}
+
+function openAdmin() {
+  if(!adminUnlocked) { openLogin(); return; }
+  renderAdminStreams();
+  renderAdminPlayers();
+  renderAdminUpcoming();
+  renderAdminResults();
+  document.getElementById("adminOverlay").classList.add("open");
+}
+function closeAdmin() {
+  document.getElementById("adminOverlay").classList.remove("open");
+}
+
+// ═══════════════════════════
+//  ADMIN — STREAMS
+// ═══════════════════════════
+function renderAdminStreams() {
+  const c = document.getElementById("streamInputs");
+  c.innerHTML = STATE.streams.map((s,i) => `
+    <div style="margin-bottom:20px;padding:16px;background:var(--surface);border:1px solid var(--border);">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--pink);margin-bottom:12px;">Stream ${i+1}</div>
+      <div class="form-row">
+        <div><label class="field-label">Bezeichnung</label><input type="text" class="field-input" id="sl-${i}" value="${s.label}" placeholder="z.B. Caster / Spieler 1"></div>
+        <div><label class="field-label">Twitch-Kanal</label><input type="text" class="field-input" id="sc-${i}" value="${s.channel}" placeholder="kanalname (leer = offline)"></div>
+      </div>
+    </div>`).join("");
+}
+
+function saveStreams() {
+  for(let i=0;i<4;i++) {
+    STATE.streams[i].label = document.getElementById("sl-"+i).value || ("Stream "+(i+1));
+    STATE.streams[i].channel = document.getElementById("sc-"+i).value.trim();
+  }
+  save("streams", STATE.streams);
+  renderStreams();
+
+  syncKeyToCloud('streams', STATE.streams);
+
+  const st = document.getElementById("streamSaveStatus");
+  st.classList.add("show");
+  setTimeout(()=>st.classList.remove("show"), 2500);
+}
+
+// ═══════════════════════════
+//  ADMIN — PLAYERS
+// ═══════════════════════════
+function addPlayer() {
+  const alias = document.getElementById("p-alias").value.trim();
+  if(!alias) return alert("Alias eingeben!");
+  STATE.players.push({
+    alias, name: document.getElementById("p-name").value.trim(),
+    role: document.getElementById("p-role").value,
+    country: document.getElementById("p-country").value.trim() || "🏳️",
+    img: document.getElementById("p-img").value.trim()
+  });
+  save("players", STATE.players);
+  ["p-alias","p-name","p-country","p-img"].forEach(id=>document.getElementById(id).value="");
+  renderPlayers();
+  renderAdminPlayers();
+
+  syncKeyToCloud('players', STATE.players);
+}
+
+function removePlayer(i) {
+  STATE.players.splice(i,1);
+  save("players", STATE.players);
+  renderPlayers();
+  renderAdminPlayers();
+  syncKeyToCloud('players', STATE.players);
+}
+
+function renderAdminPlayers() {
+  const el = document.getElementById("adminPlayerList");
+  el.innerHTML = STATE.players.map((p,i) => `
+    <div class="admin-list-item">
+      <div class="admin-list-item-info">
+        <div class="admin-list-item-title">${p.alias} ${p.country}</div>
+        <div class="admin-list-item-sub">${p.name} — ${p.role}</div>
+      </div>
+      <div class="admin-list-actions">
+        <button class="admin-btn admin-btn-danger" onclick="removePlayer(${i})">Entfernen</button>
+      </div>
+    </div>`).join("") || "<p style='color:var(--muted);font-size:13px;'>Keine Spieler eingetragen.</p>";
+}
+
+// ═══════════════════════════
+//  ADMIN — UPCOMING
+// ═══════════════════════════
+function addUpcoming() {
+  const opp = document.getElementById("u-opp").value.trim();
+  if(!opp) return alert("Gegner eingeben!");
+  STATE.upcoming.push({
+    date: document.getElementById("u-date").value.trim(),
+    time: document.getElementById("u-time").value.trim() || "TBD",
+    opponent: opp,
+    league: document.getElementById("u-league").value.trim(),
+    map: document.getElementById("u-map").value.trim() || "Best of 3"
+  });
+  save("upcoming", STATE.upcoming);
+  ["u-date","u-time","u-opp","u-league","u-map"].forEach(id=>document.getElementById(id).value="");
+  renderUpcoming();
+  renderAdminUpcoming();
+  syncKeyToCloud('upcoming', STATE.upcoming);
+}
+
+function removeUpcoming(i) {
+  STATE.upcoming.splice(i,1);
+  save("upcoming", STATE.upcoming);
+  renderUpcoming();
+  renderAdminUpcoming();
+  syncKeyToCloud('upcoming', STATE.upcoming);
+}
+
+function renderAdminUpcoming() {
+  const el = document.getElementById("adminUpcomingList");
+  el.innerHTML = STATE.upcoming.map((m,i) => `
+    <div class="admin-list-item">
+      <div class="admin-list-item-info">
+        <div class="admin-list-item-title">vs ${m.opponent}</div>
+        <div class="admin-list-item-sub">${m.date} · ${m.time} Uhr · ${m.league}</div>
+      </div>
+      <div class="admin-list-actions">
+        <button class="admin-btn admin-btn-danger" onclick="removeUpcoming(${i})">Entfernen</button>
+      </div>
+    </div>`).join("") || "<p style='color:var(--muted);font-size:13px;'>Keine Spiele geplant.</p>";
+}
+
+// ═══════════════════════════
+//  ADMIN — RESULTS
+// ═══════════════════════════
+function addResult() {
+  const opp = document.getElementById("r-opp").value.trim();
+  if(!opp) return alert("Gegner eingeben!");
+  STATE.past.unshift({
+    date: document.getElementById("r-date").value.trim(),
+    opponent: opp,
+    result: document.getElementById("r-result").value,
+    score: document.getElementById("r-score").value.trim() || "—",
+    map: document.getElementById("r-map").value.trim(),
+    league: document.getElementById("r-league").value.trim()
+  });
+  save("past", STATE.past);
+  ["r-date","r-opp","r-score","r-league","r-map"].forEach(id=>document.getElementById(id).value="");
+  renderPast();
+  renderAdminResults();
+  syncKeyToCloud('past', STATE.past);
+}
+
+function removeResult(i) {
+  STATE.past.splice(i,1);
+  save("past", STATE.past);
+  renderPast();
+  renderAdminResults();
+  syncKeyToCloud('past', STATE.past);
+}
+
+function renderAdminResults() {
+  const el = document.getElementById("adminResultList");
+  el.innerHTML = STATE.past.map((m,i) => {
+    const col = m.result==="won"?"#00D97E":m.result==="lost"?"#FF4040":"#888";
+    const label = m.result==="won"?"SIEG":m.result==="lost"?"NIEDERLAGE":"UNENTSCHIEDEN";
+    return `<div class="admin-list-item">
+      <div class="admin-list-item-info">
+        <div class="admin-list-item-title">vs ${m.opponent} <span style="color:${col};font-size:11px;margin-left:8px">${label}</span></div>
+        <div class="admin-list-item-sub">${m.date} · ${m.score} · ${m.map}</div>
+      </div>
+      <div class="admin-list-actions">
+        <button class="admin-btn admin-btn-danger" onclick="removeResult(${i})">Entfernen</button>
+      </div>
+    </div>`;
+  }).join("") || "<p style='color:var(--muted);font-size:13px;'>Noch keine Ergebnisse.</p>";
+}
+
+// ═══════════════════════════
+//  SETTINGS
+// ═══════════════════════════
+async function loadAllData() {
+  const { data, error } = await SUPABASE.from('settings').select('key, value');
+
+  if (error) {
+      console.error("Fehler beim Laden:", error);
+      return DEFAULTS;
+  }
+
+  const cloudData = {};
+  data.forEach(item => {
+      cloudData[item.key] = item.value;
+  });
+
+  return {
+      streams: cloudData.streams || DEFAULTS.streams,
+      players: cloudData.players || DEFAULTS.players,
+      upcoming: cloudData.upcoming || DEFAULTS.upcoming,
+      past: cloudData.past || DEFAULTS.past
+  };
+}
+
+async function syncKeyToCloud(key, value) {
+  const { error } = await SUPABASE
+    .from('settings')
+    .upsert({ key: key, value: value }, { onConflict: 'key' });
+    
+  if (error) console.error(`Fehler beim Sync von ${key}:`, error);
+}
+
+function changePw() {
+  const p1 = document.getElementById("newPw1").value;
+  const p2 = document.getElementById("newPw2").value;
+  const msg = document.getElementById("pwMsg");
+  if(!p1) { msg.innerHTML="Passwort eingeben!"; msg.style.color="#FF4040"; msg.style.display="block"; return; }
+  if(p1 !== p2) { msg.innerHTML="Passwörter stimmen nicht überein!"; msg.style.color="#FF4040"; msg.style.display="block"; return; }
+  hashPw(p1).then(hash => {
+    msg.innerHTML = `
+      <span style="color:var(--pink);display:block;margin-bottom:6px">✓ Neuer Hash generiert — im Code ersetzen:</span>
+      <code style="display:block;background:var(--bg3);border:1px solid var(--border);padding:10px 12px;font-size:11px;word-break:break-all;letter-spacing:0.5px;user-select:all;cursor:text;color:var(--text)">${hash}</code>
+      <span style="color:var(--muted);font-size:11px;display:block;margin-top:6px">Diesen Hash als Wert von ADMIN_PW_HASH in der index.html eintragen und Datei neu hochladen.</span>`;
+    msg.style.display = "block";
+    document.getElementById("newPw1").value="";
+    document.getElementById("newPw2").value="";
+  });
+}
+
+function resetAll() {
+  if(!confirm("Wirklich alle Daten zurücksetzen?")) return;
+  ["streams","players","upcoming","past","layout"].forEach(k=>localStorage.removeItem("mm_"+k));
+  location.reload();
+}
+
+function switchAdminTab(tab, btn) {
+  document.querySelectorAll(".admin-tab").forEach(b=>b.classList.remove("active"));
+  document.querySelectorAll(".admin-section").forEach(s=>s.classList.remove("active"));
+  btn.classList.add("active");
+  document.getElementById("admin-"+tab).classList.add("active");
+}
+
+// ═══════════════════════════
+//  INIT
+// ═══════════════════════════
+
+async function initApp() {
+  document.querySelectorAll(".stream-toggle-btn").forEach((b, i) => {
+    if (i + 1 === currentLayout) b.classList.add("active");
+    else b.classList.remove("active");
+  });
+
+  const cloudData = await loadAllData();
+
+  // STATE mit Cloud-Daten aktualisieren
+  STATE.streams = cloudData.streams;
+  STATE.players = cloudData.players;
+  STATE.upcoming = cloudData.upcoming;
+  STATE.past = cloudData.past;
+
+  renderStreams();
+  renderPlayers();
+  renderUpcoming();
+  renderPast();
+}
+
+// App starten
+initApp();
+</script>
+</body>
 </html>
