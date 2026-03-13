@@ -786,17 +786,35 @@ function editUpcoming(i) {
   document.querySelector('#admin-upcoming .admin-content').scrollTop = 0;
 }
 
+function moveUpcoming(i, direction) {
+  const newIndex = i + direction;
+  
+  if (newIndex < 0 || newIndex >= STATE.upcoming.length) return;
+  
+  const temp = STATE.upcoming[i];
+  STATE.upcoming[i] = STATE.upcoming[newIndex];
+  STATE.upcoming[newIndex] = temp;
+  
+  save("upcoming", STATE.upcoming);
+  renderUpcoming();
+  renderAdminUpcoming();
+  syncKeyToCloud('upcoming', STATE.upcoming);
+}
+
 function renderAdminUpcoming() {
   const el = document.getElementById("adminUpcomingList");
-  el.innerHTML = STATE.upcoming.map((m,i) => `
+  el.innerHTML = STATE.upcoming.map((m, i) => `
     <div class="admin-list-item">
       <div class="admin-list-item-info">
         <div class="admin-list-item-title">vs ${m.opponent}</div>
-        <div class="admin-list-item-sub">${m.date} · ${m.time} Uhr · ${m.league}</div>
+        <div class="admin-list-item-sub">${m.date} · ${m.time} Uhr</div>
       </div>
       <div class="admin-list-actions">
-        <button class="admin-btn admin-btn-primary" onclick="editUpcoming(${i})">Editieren</button>
-        <button class="admin-btn admin-btn-danger" onclick="removeUpcoming(${i})">Entfernen</button>
+        <button class="admin-btn admin-btn-ghost" style="padding: 5px 10px;" onclick="moveUpcoming(${i}, -1)" ${i === 0 ? 'disabled style="opacity:0.3"' : ''}>↑</button>
+        <button class="admin-btn admin-btn-ghost" style="padding: 5px 10px;" onclick="moveUpcoming(${i}, 1)" ${i === STATE.upcoming.length - 1 ? 'disabled style="opacity:0.3"' : ''}>↓</button>
+        
+        <button class="admin-btn admin-btn-ghost" style="border-color:var(--pink); color:var(--pink);" onclick="editUpcoming(${i})">Edit</button>
+        <button class="admin-btn admin-btn-danger" onclick="removeUpcoming(${i})">✕</button>
       </div>
     </div>`).join("") || "<p style='color:var(--muted);font-size:13px;'>Keine Spiele geplant.</p>";
 }
