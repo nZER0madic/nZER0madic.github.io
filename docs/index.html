@@ -766,6 +766,26 @@ function removeUpcoming(i) {
   syncKeyToCloud('upcoming', STATE.upcoming);
 }
 
+function editUpcoming(i) {
+  const m = STATE.upcoming[i];
+  
+  // Werte zurück in die Input-Felder laden
+  document.getElementById("u-date").value = m.date;
+  document.getElementById("u-time").value = m.time;
+  document.getElementById("u-opp").value = m.opponent;
+  document.getElementById("u-league").value = m.league;
+  document.getElementById("u-map").value = m.map;
+
+  // Das alte Match aus dem Array entfernen (wird beim Klick auf "Speichern" neu hinzugefügt)
+  STATE.upcoming.splice(i, 1);
+  
+  // UI aktualisieren
+  renderAdminUpcoming();
+  
+  // Optionaler Scroll-Effekt nach oben zum Formular
+  document.querySelector('#admin-upcoming .admin-content').scrollTop = 0;
+}
+
 function renderAdminUpcoming() {
   const el = document.getElementById("adminUpcomingList");
   el.innerHTML = STATE.upcoming.map((m,i) => `
@@ -775,6 +795,7 @@ function renderAdminUpcoming() {
         <div class="admin-list-item-sub">${m.date} · ${m.time} Uhr · ${m.league}</div>
       </div>
       <div class="admin-list-actions">
+        <button class="admin-btn admin-btn-primary" onclick="editUpcoming(${i})">Editieren</button>
         <button class="admin-btn admin-btn-danger" onclick="removeUpcoming(${i})">Entfernen</button>
       </div>
     </div>`).join("") || "<p style='color:var(--muted);font-size:13px;'>Keine Spiele geplant.</p>";
