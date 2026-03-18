@@ -749,7 +749,7 @@ function renderAdminPlayers() {
         <div class="admin-list-item-sub">${p.name} — ${p.role}</div>
       </div>
       <div class="admin-list-actions">
-        <button class="admin-btn admin-btn-ghost" style="border-color:var(--pink); color:var(--pink);" onclick="editPlayer(${i})">Entfernen</button>
+        <button class="admin-btn admin-btn-ghost" style="border-color:var(--pink); color:var(--pink);" onclick="editPlayer(${i})">Editieren</button>
         <button class="admin-btn admin-btn-danger" onclick="removePlayer(${i})">Entfernen</button>
       </div>
     </div>`).join("") || "<p style='color:var(--muted);font-size:13px;'>Keine Spieler eingetragen.</p>";
