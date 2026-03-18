@@ -716,6 +716,22 @@ function addPlayer() {
   syncKeyToCloud('players', STATE.players);
 }
 
+function editPlayer(i) {
+  const m = STATE.players[i];
+  
+  // Werte zurück in die Input-Felder laden
+  document.getElementById("p-alias").value = m.alias;
+  document.getElementById("p-role").value = m.role;
+  document.getElementById("p-country").value = m.country;
+  document.getElementById("p-img").value = m.img;
+
+  // Das alte Match aus dem Array entfernen (wird beim Klick auf "Speichern" neu hinzugefügt)
+  STATE.players.splice(i, 1);
+  
+  // UI aktualisieren
+  renderAdminPlayer();
+}
+
 function removePlayer(i) {
   STATE.players.splice(i,1);
   save("players", STATE.players);
@@ -733,6 +749,7 @@ function renderAdminPlayers() {
         <div class="admin-list-item-sub">${p.name} — ${p.role}</div>
       </div>
       <div class="admin-list-actions">
+        <button class="admin-btn admin-btn-ghost" style="border-color:var(--pink); color:var(--pink);" onclick="editPlayer(${i})">Entfernen</button>
         <button class="admin-btn admin-btn-danger" onclick="removePlayer(${i})">Entfernen</button>
       </div>
     </div>`).join("") || "<p style='color:var(--muted);font-size:13px;'>Keine Spieler eingetragen.</p>";
